@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.2",
     "nuxt": "^2.0.0"
   }
 }

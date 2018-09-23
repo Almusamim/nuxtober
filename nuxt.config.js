@@ -1,7 +1,10 @@
+const path = require('path');
+const themeDir = '/themes/'+__dirname.split(path.sep).pop();
 module.exports = {
   srcDir: 'src/',
   modules: [
-    '~/modules/october'
+    '~/modules/october',
+    '@nuxtjs/axios',
   ],
   head: {
     htmlAttrs: {
@@ -9,9 +12,11 @@ module.exports = {
     }
   },
   build: {
-    publicPath: '/themes/myTheme/assets/',
+    publicPath: themeDir +'/assets/',
   },
   generate: {
+    fallback: '404.htm', 
     dir: 'pages'
-  }
+  },
+  
 }
